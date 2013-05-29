@@ -66,6 +66,12 @@ and sets \fIerrno\fP to \fBEILSEQ\fP, if an invalid multibyte sequence was
 encountered.
 It returns \fI(size_t)\ \-2\fP if it couldn't parse a complete multibyte
 character, meaning that \fIn\fP should be increased.
+.SH ATTRIBUTES
+.SS Multithreading(see pthreads(7))
+The
+.BR mbrlen ()
+function is thread-safe with exceptions.
+It is not thread-safe if called with a NULL \fIps\fP parameter.
 .SH CONFORMING TO
 C99.
 .SH NOTES
