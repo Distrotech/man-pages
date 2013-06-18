@@ -21,7 +21,7 @@ screen:
 	for i in man?/*; do \
 		if [ $(MANDIR)/"$$i" -nt "$$i" ]; then \
 			cmp -s $(MANDIR)/"$$i" "$$i" > /dev/null 2>&1; \
-			if [ "$$?" != 0 ]; then mv "$$i" not_installed; fi; \
+			if [ "$$?" != 0 ]; then cp "$$i" not_installed; fi; \
 		fi; \
 	done
 
