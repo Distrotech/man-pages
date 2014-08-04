@@ -211,6 +211,18 @@ Often,
 is a symbolic link to the file
 .I localtime
 or to the correct timezone file in the system timezone directory.
+.SH ATTRIBUTES
+For an explanation of the terms used in this section, see
+.BR attributes (7).
+.TS
+allbox;
+lb lb lb
+l l l.
+Interface	Attribute	Value
+T{
+.BR tzset ()
+T}	Thread safety	MT-Safe env locale
+.TE
 .SH CONFORMING TO
 SVr4, POSIX.1-2001, 4.3BSD.
 .SH NOTES
